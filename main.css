@@ -1,0 +1,81 @@
+:root{
+    --clr-primary: hsl(231, 72%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey: hsl(217, 12%, 63%);
+    --clr-mgrey: hsl(216, 12%, 54%);
+    --clr-dgrey: hsl(216deg 14% 26%);
+    --clr-blue: hsl(213, 19%, 18%);
+    --clr-dblue: hsl(216, 12%, 8%);
+    font-size: 15px;
+    font-family: Overpass;
+    font-weight: 700;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #DDD;
+}
+
+.container{
+    display:flex;
+}
+.quiz{
+    background-color: aqua;
+    margin: 5rem;
+    padding: 2rem;
+}
+.quiz.left{
+    margin-left:auto;
+    margin-right: auto;
+
+}
+.quiz.right{
+    margin-right:auto;
+}
+.btn{
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 1em 1em;
+    border-radius: 1.8em;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    border: 0;
+    font-weight: var(700);
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.current-score{
+    margin: 1rem;
+}
+#ValuesForm > label{
+    display:block;
+    margin: 0.5em 0;
+}
+#ValuesForm input{
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+#SignsToUse > label{
+    margin-right: 1em;
+}
+.question-card{
+    padding: 0.5em;
+    margin: 1em;
+}
+.question-card h3{
+    margin:0;
+}
+.question-card p{
+    font-weight: 400;
+    margin:0 auto;
+}
+.wrong{
+    background-color: rgb(223, 165, 165)
+}
+.correct{
+    background-color: rgb(141, 192, 141);
+}
