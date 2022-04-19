@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="quiz left">
+                <div class="optionscreen">
+                    <form id="ValuesForm" method="POST" action="" >
+                        <label for="NumberOfQuestions"> Number Of Questions</label>
+                            <input class="inputfield" type="text" id="NumberOfQuestions" name="NumberOfQuestions" placeholder="Number OF Quesions" value="2" aria-valuemin="1">
+                        
+                        <label for="RangeOfNumbers"> Range of Numbers</label>
+                            <input class="inputfield" type="text" id="RangeOfNumbers" name="RangeOfNumbers" placeholder="Range of Numbers" value="10" >
+                        
+                        <label for="SignsToUse" id="SignsToUse" >Check the signs you want to Practice<br>
+                            <input type="checkbox" name="signs[]" value="+" checked>Plus
+                            <input type="checkbox" name="signs[]" value="-" checked>Minus
+                            <input type="checkbox" name="signs[]" value="*" checked>Multiply
+                            <input type="checkbox" name="signs[]" value="/" checked>Divide
+                        </label>
+                        <button id="startbtn" class="btn navbtn" type="submit" name="submit">Start New Game</button>
+                    </form>
+                </div>
+                <div class="game hide">
+                    
+                    <div class="question-container">
+                        <h3 class="question left"></h3>
+                    </div>
+                    <div class="answer-container">
+                        <input type="number submit" id="answer"/>
+                    </div>
+            
+                <div class="navigation">
+                    <button data-type="next" class="btn nextbtn">Next</button>
+                </div>
+                
+                </div>
+                <div class="current-score hide"></div>
+                <div class="finalresult">
+                </div>
+            </div>  
+           
+            
+        </div>
+        <script src="./main.js" async defer></script>
+    </body>
+</html>
