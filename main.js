@@ -9,6 +9,7 @@ const scorediv= document.querySelectorAll(".current-score")
 const nextbtn=document.querySelector(".nextbtn")
 const finishbtn=document.querySelector('[data-type="finish"]')
 const resultpage=document.querySelector('.finalresult')
+const tryagain=document.querySelector('#restart')
 let signs=[]
 let questions=[]
 let index=0
@@ -28,8 +29,6 @@ sbtn.addEventListener("click",(e)=>{
     }
     createQuestionnaire(questions)
     startgame()
-    let NumQuestions=valuesarray.NumberOfQuestions
-    let Range=valuesarray.RangeOfNumbers
 })
 
 
@@ -81,6 +80,10 @@ function updatescore(index){
 
 function displayFinalResult(){
         game[0].classList.add('hide')
+        tryagain.classList.remove('hide')
+        tryagain.addEventListener("click",()=>{
+            window.location.reload()
+        })
         questions.forEach((question)=>{
         if(question.Question){
             scorediv[0].textContent=`final Score = ${questions[0].score} / ${questions[0].totalquestions}`
@@ -127,7 +130,7 @@ function createQuestionnaire(questiondict){
     return questiondict
 }
 
-function flushQuestionanaire(questiondict){
-    questiondict=[]
-    return questiondict
+function flushQuestionanaire(){
+
+
 }
